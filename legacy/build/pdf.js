@@ -15140,6 +15140,7 @@ var CanvasGraphics = function CanvasGraphicsClosure() {
         var patternFill = current.patternFill && !font.missingFile;
         var addToPath;
 
+        font.disableFontFace = !font.missingFile || font.mimetype;
         if (font.disableFontFace || isAddToPathSet || patternFill) {
           addToPath = font.getPathGenerator(this.commonObjs, character);
         }
